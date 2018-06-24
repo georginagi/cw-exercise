@@ -1,4 +1,4 @@
-class Developers:
+class Developer:
     
     def __init__(self, name, age, oss_projects):
         self._name = name
