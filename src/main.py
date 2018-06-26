@@ -28,6 +28,8 @@ class MyPrompt(Cmd):
         raise SystemExit
     
     def do_show_list(self, args):
+        if len(args) == 0:
+            self.do_show_list(devs)
         for dev in args:
             print("Name: {}, Age: {}, OSS_Projects: {}".format(dev.name, dev.age, dev.oss_projects))
     
@@ -37,7 +39,7 @@ class MyPrompt(Cmd):
         else:
             print("Adding new developer to our list...")
             devs.append(Developer(args.split(" ")[0], args.split(" ")[1], args.split(" ")[2]))
-            self.do_show_list()
+            self.do_show_list(devs)
     
     def do_add_developers(self, file):
         pass
@@ -47,10 +49,8 @@ class MyPrompt(Cmd):
         if args_len==0:
             print("Specify filters: name and/or age and/or oss_projects as well as ASC or DESC order")
         filters = []
-        for i in range(args_len):
-            filters.append(args.split(" ")[i])
-        
-        if 'DESC' in args.split(" ")[args_len-1]:
+        filters = args.split(" ")
+        if 'DESC' in filters[args_len-1]:
             reverse = True
             filters.remove('DESC')
         else: 
@@ -61,13 +61,7 @@ class MyPrompt(Cmd):
 
     def sort_by_attributes(self, devs, filters, reverse):
         sorted_devs = []
-        if len(filters) == 1:
-            sorted_devs = sorted(devs, key=attrgetter(filters[0]), reverse=reverse)
-        else:
-            for i, val1 in enumerate(filters):
-                for j, val2 in enumerate(filters):
-                    if val1 != val2:
-                        sorted_devs = sorted(devs, key=attrgetter(val1, val2), reverse=reverse)
+        sorted_devs = sorted(devs, key=attrgetter(*filters), reverse=reverse)
         return sorted_devs
 
 if __name__ == '__main__':
