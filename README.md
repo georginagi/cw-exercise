@@ -1,7 +1,7 @@
 # cw
 
 Local development
-======
+-----------------
 
 Install python3 with: 
 sudo apt-get install python3
@@ -42,19 +42,13 @@ and then run
 
 That should print:
 
-Name: Amanda, Age: 21, OSS_Projects: 8
-
-Name: Amanda, Age: 21, OSS_Projects: 9
-
-Name: John, Age: 29, OSS_Projects: 3
-
-Name: Lawrence, Age: 32, OSS_Projects: 2
-
-Name: Linda, Age: 29, OSS_Projects: 5
-
-Name: Robert, Age: 24, OSS_Projects: 1
-
-Name: Steven, Age: 24, OSS_Projects: 4
+*Name: Amanda, Age: 21, OSS_Projects: 8
+*Name: Amanda, Age: 21, OSS_Projects: 9
+*Name: John, Age: 29, OSS_Projects: 3
+*Name: Lawrence, Age: 32, OSS_Projects: 2
+*Name: Linda, Age: 29, OSS_Projects: 5
+*Name: Robert, Age: 24, OSS_Projects: 1
+*Name: Steven, Age: 24, OSS_Projects: 4
 
 2. There are severals improvements that can be made regarding design, for example remove the sorting functionality outside the script class and with that in mind unit tests as well would be nice to validate the correctness of the sorting function. 
 
