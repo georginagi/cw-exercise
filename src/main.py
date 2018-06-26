@@ -1,8 +1,6 @@
 from operator import itemgetter, attrgetter, methodcaller
-import argparse
 from developer import Developer
 from cmd import Cmd 
-import argparse
 
 
 class MyPrompt(Cmd):
