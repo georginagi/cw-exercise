@@ -1,4 +1,4 @@
-from operator import itemgetter, attrgetter, methodcaller
+from operator import attrgetter
 from developer import Developer
 from cmd import Cmd 
 
