@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cw
 
 Local development
@@ -48,3 +49,6 @@ Name: Steven, Age: 24, OSS_Projects: 4
 2. There are severals improvements that can be made regarding design, for example remove the sorting functionality outside the script class and with that in mind unit tests as well would be nice to validate the correctness of the sorting function. 
 
 3. Import of more than one developer given a type of file (add_developers)
+=======
+# cw-exercise
+>>>>>>> e8e989c3189ac9189e0478cfba0fcdca0ccf0bd6
