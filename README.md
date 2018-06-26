@@ -15,7 +15,7 @@ main.py : main script with interactive command line to run the sorting and add d
 
 Run:
 ---
-python main.py
+python src/main.py
 
 Comments
 -----------------
